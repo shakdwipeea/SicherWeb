@@ -1,0 +1,25 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/default.css">
+	<link rel="stylesheet" type="text/css" href="./css/stats.css">
+</head>
+<body>
+
+	<h1>Statistics</h1>
+	<div id = 'details'></div>
+	<div id = 'graph'></div>
+	<div id = 'controls'></div>
+	<div id = 'direct'>
+		<button>Home</button>
+		<button>Overview</button>
+		<img id = 'menu' src = 'http://aicchile.com/wp-content/themes/caic/assets/img/icon-menu.png' ></img>
+	</div>
+	<div class = 'drop'>
+		<div class = 'gb_7'></div>
+		<div class = 'gb_8'></div>
+	</div>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src = './js/jqBarGraph.1.1.min.js'></script>
+	<script type="text/javascript" src = './js/stats.js'></script>
+</body>
+</html>

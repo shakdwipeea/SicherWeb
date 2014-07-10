@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  width: 320px;
+  margin: 20px auto;
+}
+form div {
+  position: relative;
+  height: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+form input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid gray;
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 6px;
+  outline: 0;
+}
+form input:valid {
+  background: white;
+}
+form input:focus {
+  border-color: #f06d06;
+}
+form input:focus + label {
+  background: #f06d06;
+  color: white;
+  font-size: 70%;
+  padding: 3px 6px;
+  z-index: 2;
+}
+form input:focus + label.go-bottom {
+  top: 100%;
+}
+form input:focus + label.go-right {
+  right: 0;
+  margin-right: 0;
+  width: 40%;
+}
+form label {
+  transition: 0.2s;
+  position: absolute;
+  color: #999;
+  padding: 7px 6px;
+}
+form label.go-bottom {
+  top: 0;
+  left: 0;
+}
+form label.go-right {
+  top: 0;
+  right: 100%;
+  width: 100%;
+  margin-right: -100%;
+}

@@ -1,0 +1,138 @@
+body {
+	background-color:#d0d0d0;
+	background-image: url("http://www.hcrepublican.com/wp-content/uploads/2014/02/120118_marbet-website-background-5.jpg"); 
+}
+h1 {
+	text-align: center;
+}
+
+div#graph {
+color: maroon;
+font-family: cursive;
+margin-left: 30%;
+margin-top: 10%;
+display: inline-block;
+}
+
+div#details {
+color: maroon;
+font-family: cursive;
+margin-left: 30%;
+margin-top: 8%;
+display: none;
+background-color: #fff;
+padding: 20px;
+padding-left: 30px;
+width: 39%;
+}
+
+#controls {
+	margin-left: 60%;
+	margin-top: 0%;
+	margin-right: 20px;
+	top:120px;
+	position: fixed;
+	z-index: 2;
+}
+
+.gb_8 > button {
+	  display:block;
+	  border: none;
+}
+
+button {
+	color: #378DE5;
+  background-color: #fff;
+  border: 1px solid #378DE5;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  transition: all .3s ease;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  margin-bottom: 20px;
+
+}
+
+button:hover {
+	background-color: #378DE5;
+  color: #fff;
+}
+
+#direct {
+	margin-left: 76%;
+	position: fixed;
+	z-index: 2;
+	top:  1%;
+}
+
+#direct > button {
+	border: none;
+	margin-right: 10px;
+}
+
+#direct > img {
+	
+	margin-bottom: -28px;	
+}
+
+.gb_7 {
+border-color: transparent;
+border-style: dashed dashed solid;
+border-width: 0 8px 8px;
+display: block;
+position: fixed;
+left: 94%;
+z-index: 3;
+height: 0;
+width: 0;
+-webkit-animation: gb__a .2s;
+animation: gb__a .2s;
+border-bottom-color: #ccc;
+border-bottom-color: rgba(0,0,0,.2);
+top: 60px;
+}
+
+.gb_8{
+	background: #fff;
+margin: 0;
+min-height: 10px;
+padding: 28px;
+padding-right: 27px;
+text-align: center;
+white-space: normal;
+width: 200px;
+top:47px;
+position: absolute;
+display: none;
+}
+
+.drop {
+	display: none;
+	z-index: 3;
+	position: fixed;
+	left: 84%;
+	top: 24px;
+}
+
+#menu {
+	display: inline-block;
+outline: none;
+vertical-align: middle;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+height: 30px;
+width: 30px;
+left: 93%;
+top: 10px;
+position: fixed;
+background-size: 112px 1828px;
+}
+
+.menu {
+
+}

@@ -1,0 +1,160 @@
+.cbp-mc-form {
+	position: relative;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cbp-mc-form:before, 
+.cbp-mc-form:after { 
+	content: " "; display: table; 
+}
+
+.cbp-mc-form:after { 
+	clear: both; 
+}
+
+.cbp-mc-column {
+	width: 33%;
+	padding: 10px 30px;
+	margin-left: 100px;
+	float: left;
+}
+
+.cbp-mc-column select
+{
+margin-bottom: 20px;
+}
+
+.cbp-mc-form label {
+	display: block;
+	padding: 40px 5px 5px 2px;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	/*cursor: pointer;*/
+}
+
+.cbp-mc-form input,
+.cbp-mc-form textarea,
+.cbp-mc-form select {
+	font-family:  Calibri, Arial, sans-serif;
+	line-height: 1.5;
+	font-size: 1.4em;
+	padding: 5px 10px;
+	color: #000033;
+	display: block;
+	width: 100%;
+	background-color: rgba(0,123,123,0.7);
+	/*background: transparent;*/
+}
+
+.cbp-mc-form input,
+.cbp-mc-form textarea {
+	
+}
+
+.cbp-mc-form textarea {
+	min-height: 200px;
+}
+
+.cbp-mc-form input:focus,
+.cbp-mc-form textarea:focus,
+.cbp-mc-form label:active + input,
+.cbp-mc-form label:active + textarea {
+	outline: none;
+	border: 1px solid #33cc66;
+}
+
+.cbp-mc-form select:focus {
+	outline: none;
+}
+
+::-webkit-input-placeholder:active { /* WebKit browsers */
+    color: #ffccff;
+    /*font-style: italic;*/
+    display: none;
+    font-family: sans-serif;
+    font-weight: 0;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #10689a;
+    font-style: italic;
+   font-family: sans-serif;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #10689a;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #10689a;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.cbp-mc-submit-wrap {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.cbp-mc-form input.cbp-mc-submit {
+
+	background: #00ffff;
+	margin-left: 0px;
+	border: 1px solid #000066;
+	color: #808080;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 15px 30px;
+	width: 350px;
+	font-size: 1.1em;
+	border-radius: 2px;
+	letter-spacing: 1px;
+		top: -800px;
+		background-color: rgba(0,123,123,0.1);
+}
+
+.cbp-mc-form input.cbp-mc-submit:hover {
+	color: #fff;
+	background: #606060;
+}
+
+@media screen and (max-width: 70em) {
+	.cbp-mc-column {
+		width: 50%;
+	}
+	.cbp-mc-column:nth-child(3) {
+		width: 100%;
+	}
+}
+
+.stats {
+		background: #00ffff;
+	margin-left: -700px;
+	border: 1px solid #000066;
+	color: #000099;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 15px 30px;
+	width: 350px;
+	font-size: 1.1em;
+	border-radius: 2px;
+	letter-spacing: 1px;
+}
+
+.stats:hover {
+	background: #1478b1;
+}
+
+@media screen and (max-width: 48em) {
+	.cbp-mc-column {
+		width: 100%;
+		padding: 10px;
+	}
+}
