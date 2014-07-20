@@ -21,19 +21,25 @@ $email = $_POST["email"];
 $software = $_POST["software"];
 $keys = $_POST["keys"];
 $trial =$_POST["version"];
-$count = 0;
+$count = $_POST["count"];
 $table = $statusInfo->softwares[$software];
 $statusInfo->software = $table;
-unset($_POST['submit']);
+$flag = 0;
+    unset($_POST['submit']);
+
+    if($trial == 0 && $count == 0){
+        echo "<script>alert('Missing Values!');</script>";
+        echo "<script>window.location.href='index.php';</script>";
+    }
 
 if($name=="" || $email == "" || $software == "" || $keys == "")
 {
-	echo "<script>alert('Missing Values!')</script>";
-	echo "<script>window.location.href='index.php'</script>";
+	echo "<script>alert('Missing Values!');</script>";
+	echo "<script>window.location.href='index.php';</script>";
 }
 
 
-$con = mysql_connect("127.0.0.1","root","") or die(" Mysql Connection Error");
+$con = mysql_connect("localhost","akash","shakdwipeea") or die(" Mysql Connection Error");
 
 for($x=0;$x<$keys;$x++){
 	if($statusInfo->keyType == "Simple"){
@@ -56,24 +62,23 @@ mysql_select_db("security") or die("Invalid DB");
 
 for($x=0;$x<$keys;$x++){
     $query = "Insert into $table values('$name','$key[$x]',NULL,'$email','$trial','$count')";
-    echo($query);
+    //echo($query);
     $res = mysql_query($query) or die('Error in 1' . mysql_error());
     if(!$res)
     {
-        echo '<script>alert("Failed Retry!")</script>';
-        echo "<script>window.location.href='index.php'</script>";
+        echo '<script>alert("Failed Retry!");</script>';
+        echo "<script>window.location.href='index.php';</script>";
     }
     else {
-        $count++;
+        $flag++;
     }
     //populating the keylist table
-
-    $query2 = "insert into  keylist values ('$key[$x]','$table',0)";
+   $query2 = "insert into  keylist values ('$key[$x]','$table',0,'$trial')";
     $res2 = mysql_query($query2) or die(mysql_error());
-    if(!$res)
+    if(!$res2)
         {
-            echo '<script>alert("Failed Retry!")</script>';
-            echo "<script>window.location.href='index.php'</script>";
+            echo '<script>alert("Failed Retry!");</script>';
+            echo "<script>window.location.href='index.php';</script>";
         }
 
 
@@ -82,15 +87,15 @@ for($x=0;$x<$keys;$x++){
 
 mysql_close();
 
-if($count == $keys)
+if($flag == $keys)
 {
-echo "<script> alert('User Registered Successfully')</script>";
+echo "<script> alert('User Registered Successfully');</script>";
 sendMail();
 }
 else
 {
-echo "<script> alert('Partial Registration')<script>";
-echo "<script>window.location.href='index.php'</script>";
+echo "<script> alert('Partial Registration');<script>";
+echo "<script>window.location.href='index.php';</script>";
 }
 }
 else{
@@ -137,7 +142,7 @@ function get_SecureKey()
 	}
 	
 	$SecureKey[strlen($SecureKey)-1] = "";
-	print_r($SecureKey);
+//	print_r($SecureKey);
 	return $SecureKey;
 }
 
@@ -147,8 +152,10 @@ function get_random_no($len) {
 }
 
 function sendMail(){
-	echo "<script>alert('User Registered. Key sent to email.'</script>";
-header("Location:./mailer.php");
+    //echo "In sendmailaaaaa";
+	//echo "<script>alert('User Registered. Key sent to email.');</script>";
+    echo "<script>window.location.href='mailer.php'</script>";
+   // header("Location: ./mailer.php");
 }
 
 ?>

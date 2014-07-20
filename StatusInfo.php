@@ -93,7 +93,7 @@ class StatusInfo {
 	
 	function addKey($key,$x)
 	{
-		echo"Key: $key<br>";
+		//echo"Key: $key<br>";
 		$this->UKeys[$x] = $key;
 	}
 	

@@ -4,7 +4,7 @@
 		noOfUsers,
 		d,
 		softwares = [];
-	var request = $.post('http://127.0.0.1:8000',function (Data) {
+	var request = $.post('http://sicherstats-20743.onmodulus.net/',function (Data) {
 			data = JSON.parse(Data);
 			console.log('Data' , data);
 			//alert(data.punchcard);
@@ -77,7 +77,7 @@ var d = {};
 		var $but = $(this);
 		console.log($but);
 		if($but.text() == 'Home') {
-			window.location.replace ('http://127.0.0.1/CloudSecure/form/index.php');
+			window.location.replace ('http://kyaji.in/form/index.php');
 		} else if($but.text() == 'Overview'){
 			$('#details').slideUp();
 			$('#graph').slideDown();
@@ -102,5 +102,7 @@ var d = {};
 			}
 			
 		});
+
+
 	
 })();

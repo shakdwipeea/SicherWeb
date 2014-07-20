@@ -56,6 +56,8 @@ header('Location: ../login/login.php');
 	  					<input type="text" id="name" name="name" placeholder="Name">
 						<label for="email">Email</label>
 	  					<input type="text" id="email" name="email" placeholder="Email Address">
+                        <label for="count">No of trial</label>
+                        <input type="number" id="count" name="count" >
 	  				</div>
 	  				<div class="cbp-mc-column">
 	  				<label for="software">Select the Software</label>
@@ -81,6 +83,7 @@ header('Location: ../login/login.php');
 	  						<option value = '0'>Trial</option>
 	  						<option value = '1'>Full(Paid)</option>
 	  					</select>
+
 	  				</div>
 	  				<div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" name="submit" id="submit" value="Submit" /></div>
 	  				

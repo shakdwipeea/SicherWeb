@@ -16,7 +16,7 @@
 <ul>
 <li><a  href="#">Home</a></li>
 <li><a href="#">About</a></li>
-<li><a href="#">Products</a></li>
+<li><a href="../Products/index.html">Products</a></li>
 <li><a href="#">Services</a></li>
 </ul>
 </nav>
@@ -61,19 +61,6 @@
     </div><!-- button -->
   </section><!-- content -->
 </div><!-- container -->
-
-
-<div id = 'images'>
-  <img id = 'one' src = './images/Security_large.jpg' alt = '' width = '800' height = '400'></img>
- <img id = 'two' src = './images/Network-Monitoring.jpg' alt = '' width = '800' height = '400'></img>
-  <img id = 'three' src = './images/statistics.jpg' alt = '' width = '800' height = '400'></img>
-  <img id = 'four' src = './images/infosec.jpg' alt = '' width = '800' height = '400'></img>
-</div>
-
-    
-
-
-
 <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
 <script type="text/javascript" src='./js/ak.js'></script>
 </body>

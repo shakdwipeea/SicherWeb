@@ -15,15 +15,14 @@ display: inline-block;
 }
 
 div#details {
-color: maroon;
-font-family: cursive;
-margin-left: 30%;
-margin-top: 8%;
-display: none;
-background-color: #fff;
-padding: 20px;
-padding-left: 30px;
-width: 39%;
+    color: maroon;
+    font-family: cursive;
+    margin-left: 20%;
+    margin-top: 8%;
+    display: none;
+    padding: 20px;
+    padding-left: 30px;
+    margin-right: 20%;
 }
 
 #controls {
@@ -135,4 +134,13 @@ background-size: 112px 1828px;
 
 .menu {
 
+}
+#table {
+    background-color: #ffffff;
+}
+#print{
+    position: absolute;
+
+    margin-left: 10%;
+    margin-top: -2.5%;
 }

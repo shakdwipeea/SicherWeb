@@ -1,6 +1,6 @@
 <?php
 require './StatusInfo.php';
-$con = mysql_connect("127.0.0.1","root","");
+$con = mysql_connect("localhost","akash","shakdwipeea");
 if(!$con)
 {
 	die("Error in Connection!".mysql_error());
@@ -10,7 +10,7 @@ $pass = $_POST["password"];
 if($login!="" && $pass!="")
 {
     mysql_select_db("security") or die("Invalid DB");
-    $data =  mysql_query("Select * from Users where email='$login'") or die("Query Error");
+    $data =  mysql_query("Select * from users where email='$login'") or die("Query Error");
     $info = mysql_fetch_array($data);
     if($info){
     $dlogin = $info["email"];

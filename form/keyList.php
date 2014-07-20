@@ -10,7 +10,7 @@ exit(1);
 }
 else{
 	$statusInfo = $_SESSION["statusInfo"];
-	$con = mysql_connect("127.0.0.1","root","");
+	$con = mysql_connect("localhost","akash","shakdwipeea");
 	mysql_select_db("security") or die("Invalid DB");
 	}	
 ?>
@@ -44,7 +44,7 @@ else{
 				<form class="cbp-mc-form" method="post" action="register.php">
 	  				<div class="cbp-mc-column">
 <?php
-$res = mysql_query("Select * from SoftwareList;");
+$res = mysql_query("Select * from softwarelist;");
 
 while($row = mysql_fetch_array($res))
 {

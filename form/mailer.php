@@ -1,11 +1,12 @@
+
 <?php
+
 require('../StatusInfo.php');
 require('../PHPMailer/class.phpmailer.php');
 
 session_start();
 $status = $_SESSION['statusInfo'];
 //print_r($_SESSION);
-
 $Uname = $status->UName;
 $Uemail = $status->UEmail;
 $software = $status->software;
@@ -14,21 +15,21 @@ $software = $status->software;
 //echo $Uname;
 
 $mail = new PHPMailer();
-$mail->PluginDir = '../../PHPMailer/'; // relative path to the folder where PHPMailer's files are located
+$mail->PluginDir = '../PHPMailer/'; // relative path to the folder where PHPMailer's files are located
 $mail->IsSMTP();
-$mail->Port = 587;
-$mail->Host = 'smtp.mandrillapp.com'; // "ssl://smtp.gmail.com" didn't worked
+$mail->Port = 465;
+$mail->Host = 'p3plcpnl0175.prod.phx3.secureserver.net'; // "ssl://smtp.gmail.com" didn't worked
 $mail->IsHTML(true); // if you are going to send HTML formatted emails
 $mail->Mailer = 'smtp';
-$mail->SMTPSecure = 'tls';
+$mail->SMTPSecure = 'ssl';
 
 $mail->SMTPAuth = true;
-$mail->Username = "ashakdwipeea@gmail.com";
-$mail->Password = "Dfhacm-zBJ6Jo4vcuFxzhA";
+$mail->Username = "akash@kyaji.in";
+$mail->Password = "mayankraj1@A";
 
 $mail->SingleTo = true; // if you want to send mail to the users individually so that no recipients can see that who has got the same email.
 
-$mail->From = "ashakdwipeea@gmail.com";
+$mail->From = "akash@kyaji.in";
 $mail->FromName = "Akash";
 
 //$mail->addAddress("+919980770077@msg.iridium.com","9980770077");
@@ -53,10 +54,13 @@ $msg = $msg."Key($n) : $keys[$i]<br>";
 $mail->Subject = $status->software." Registration";
 $mail->Body = $msg;
 if(!$mail->Send()){
-    echo  "<script>Message was not sent <br />PHP Mailer Error: " . $mail->ErrorInfo . "</script>";
+echo  "<script>Message was not sent <br />PHP Mailer Error: " . $mail->ErrorInfo . "</script>";
 }
 else{
-   echo "<script>alert('User registered. Keys sent to your email')</script>";
-	echo "<script>window.location.href='index.php'</script>";
-	}
+echo "<script>alert('User registered. Keys sent to your email');</script>";
+echo "<script>window.location.href='index.php'</script>";
+}
+
+
+
 ?>

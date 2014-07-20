@@ -1,0 +1,13 @@
+#container {
+    margin: 20%;
+    margin-top: -10%;
+    padding: 10%;
+    color: #ffffff;
+    background-color: rgba(136,136,136,0.6);
+    background: url("http://www.infragistics.com/community/cfs-filesystemfile.ashx/__key/CommunityServer.Blogs.Components.WeblogFiles/marketing/6786.C_5F00_sharp.png") center center fixed;
+    text-align: center;
+}
+
+#container:hover {
+    color: #1dc116;
+}
