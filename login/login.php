@@ -24,16 +24,16 @@
 
  <div class="container1">
   <section id="content">
-    <form method="post" action="../auth.php">
+    <form method="post" id="login" action="../auth.php">
     <div id="wrapper">
       <div id="box">
           <div id="top_header">
               <h3>Login</h3>
-              <h5>Sign in to continue to your control panel.</h5>
+              <p id="message"></p>
           </div>
         
         <div id="inputs">
-          <form id='login' action='../auth.php' method='post' accept-charset='UTF-8' style="margin-left:6px;">
+          <form id='logon' action='../auth.php' method='post'  accept-charset='UTF-8' style="margin-left:6px;">
         
         <input type='hidden' name='submitted' id='submitted' value='1'/>
 
@@ -61,7 +61,26 @@
     </div><!-- button -->
   </section><!-- content -->
 </div><!-- container -->
-<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 <script type="text/javascript" src='./js/ak.js'></script>
+<script>
+    $(document).ready(function () {
+
+        $('#login').validate({ // initialize the plugin
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true
+                }
+            }
+        });
+
+    });
+</script>
 </body>
 </html>

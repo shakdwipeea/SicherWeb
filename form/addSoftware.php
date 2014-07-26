@@ -49,10 +49,19 @@ header('Location: ../login/login.php');
 
 			<div class="main">
 				<form class="cbp-mc-form" method="post" action="addSoft.php">
-					<div class="cbp-mc-column">
+					<div class="cbp-mc-column add">
 						<label for="first_name">Software Name</label>
 	  					<input type="text" id="name" name="name" placeholder="Software Name">
-	  				</div>
+
+                        <label for="email">Email of developer</label>
+                        <input type="text" id="email" name="email" placeholder="Email of developer">
+
+
+
+
+                        <label for="phone">Contact number</label>
+                        <input type="text" id="phone" name="phone" placeholder="Phone number">
+                    </div>
 	  				<div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" name="submit" id="submit" value="Submit" /></div>
 	  				
 				</form>

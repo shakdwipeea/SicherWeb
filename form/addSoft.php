@@ -14,21 +14,23 @@ else
 
 if(isset($_POST['submit'])){
 $name = $_POST["name"];
+$email = $_POST["email"];
+$phone = $_POST["phone"];
 unset($_POST['submit']);
 $name = strtolower($name);
-if($name=="")
+if($name=="" || $email == "" || $phone =="")
 {
 	echo "<script>alert('Missing Values!')</script>";
 	echo "<script>window.location.href='index.php'</script>";
 }
 
-
+  $name = preg_replace('/\s+/','',$name);
 
 $con = mysql_connect("localhost","akash","shakdwipeea") or die(" Mysql Connection Error");
 
 mysql_select_db("security") or die("Invalid DB");
 
-$query = "Insert into softwarelist values('$name','NULL')";
+$query = "Insert into softwarelist values('$name','NULL','$email','$phone')";
 //echo($query);
 $res = mysql_query($query);
 

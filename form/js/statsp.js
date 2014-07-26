@@ -6,7 +6,7 @@
         var $but = $(this);
         console.log($but);
         if($but.text() == 'Home') {
-            window.location.replace ('http://kyaji.in/form/index.php');
+            window.location.replace ('http://licensor.ddns.net/form/index.php');
         } else if($but.text() == 'Overview'){
             $('#details').slideUp();
             $('#graph').slideDown();

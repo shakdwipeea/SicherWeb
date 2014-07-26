@@ -141,4 +141,12 @@ color: #F39C12;
     max-height: 400px;
 }
 
+.add {
+    width: 33%;
+    padding: -1px 20px;
+    margin-left: 34%;
+    float: left;
+
+}
+
 /* No CSS3 support: none */
