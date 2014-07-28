@@ -24,7 +24,9 @@ if($name=="" || $email == "" || $phone =="")
 	echo "<script>window.location.href='index.php'</script>";
 }
 
-  $name = preg_replace('/\s+/','',$name);
+  $name = trim($name);
+  $name = preg_replace('/[^a-zA-Z0-9]/', '_', $name);
+  
 
 $con = mysql_connect("localhost","akash","shakdwipeea") or die(" Mysql Connection Error");
 
