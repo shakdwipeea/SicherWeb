@@ -29,13 +29,13 @@ $mail->Mailer = 'smtp';
 $mail->SMTPSecure = 'ssl';
 
 $mail->SMTPAuth = true;
-$mail->Username = "ashakdwipeea@gmail.com";
-$mail->Password = "Dfhacm-zBJ6Jo4vcuFxzhA";
+$mail->Username = "badari.rvce@gmail.com";
+$mail->Password = "Hj4n-5o15NwZHNiawVIQRQ";
 
 $mail->SingleTo = true; // if you want to send mail to the users individually so that no recipients can see that who has got the same email.
 
-$mail->From = "ashakdwipeea@gmail.com";
-$mail->FromName = "Akash";
+$mail->From = "badari.rvce@gmail.com";
+$mail->FromName = "R & D lab, RVCE";
 
 //$mail->addAddress("+919980770077@msg.iridium.com","9980770077");
 $mail->addAddress($Uemail,$Uname);
@@ -57,7 +57,7 @@ $msg = $msg."Key($n) : $keys[$i]<br>";
 //echo $msg;
 
 $mail->Subject = $status->software." Registration";
-$mail->Body = $msg;
+$mail->Body = '<strong>'.$msg.'</strong>';
 if(!$mail->Send()){
 echo  "<script>Message was not sent <br />PHP Mailer Error: " . $mail->ErrorInfo . "</script>";
 }
@@ -75,6 +75,26 @@ echo "<script>alert('User registered. Keys sent to your email');</script>";
     $info = mysql_fetch_array($res);
 
     if($info) {
+	$mail = new PHPMailer();
+	$mail->PluginDir = '../PHPMailer/'; // relative path to the folder where PHPMailer's files are located
+	$mail->IsSMTP();
+	$mail->Port = 465;
+	$mail->Host = 'smtp.mandrillapp.com'; // "ssl://smtp.gmail.com" didn't worked
+	$mail->IsHTML(true); // if you are going to send HTML formatted emails
+	$mail->Mailer = 'smtp';
+	$mail->SMTPSecure = 'ssl';
+
+	$mail->SMTPAuth = true;
+	$mail->Username = "badari.rvce@gmail.com";
+	$mail->Password = "Hj4n-5o15NwZHNiawVIQRQ";
+
+	$mail->SingleTo = true; // if you want to send mail to the users individually so that no recipients can see that who has got the same email.
+
+	$mail->From = "badari.rvce@gmail.com";
+	$mail->FromName = "R & D lab, RVCE";
+
+
+	
         $em = $info['email'];
 
         $mail->addAddress($em,$em);
