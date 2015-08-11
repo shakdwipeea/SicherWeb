@@ -40,13 +40,14 @@ header('Location: ../login/login.php');
 						<div id="dd" class="wrapper-dropdown-5 right" tabindex="1"> <span class="name"><?php echo $statusInfo->cname ?></span>
 						<ul class="dropdown">
 							<li><a href="addSoftware.php">Add Software</a></li>
+							<li><a href="removeSoftware.php">Delete Software</a></li>
 							<li><a href="keyList.php">List Keys</a></li>
 							<li><a href = 'stats.php'>Statistics</a></li>
 							<li><a href="logout.php">Log out</a></li>
 						</ul>
 					</div>
-					
-				</nav>					
+
+				</nav>
 			</header>
 
 			<div class="main">
@@ -62,10 +63,10 @@ header('Location: ../login/login.php');
 	  				<div class="cbp-mc-column">
 	  				<label for="software">Select the Software</label>
 	  					<select id="software" name="software"><?php
-	  						
+
 	  						foreach($statusInfo->softwares as $key=>$val)
 	  							echo "<option value='$key'>$val</option>";
-	  					
+
 	  					?>
 	  						<!-- <option value="PunchCard">PunchCard</option> -->
 	  					</select>
@@ -86,7 +87,7 @@ header('Location: ../login/login.php');
 
 	  				</div>
 	  				<div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" name="submit" id="submit" value="Submit" /></div>
-	  				
+
 				</form>
 			</div>
 		</div>
@@ -104,7 +105,7 @@ header('Location: ../login/login.php');
 					obj.dd.on('click', function(event){
 						$(this).toggleClass('active');
 						event.stopPropagation();
-					});	
+					});
 				}
 			}
 
