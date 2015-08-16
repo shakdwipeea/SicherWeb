@@ -26,7 +26,7 @@ if($name=="" || $email == "" || $phone =="")
 
   $name = trim($name);
   $name = preg_replace('/[^a-zA-Z0-9]/', '_', $name);
-  
+
 
 $con = mysql_connect("localhost","akash","shakdwipeea") or die(" Mysql Connection Error");
 
@@ -42,7 +42,7 @@ echo($res2);
 if(!$res && !$res2)
 {
 	echo '<script>alert("Software Already Exists!")</script>';
-	echo "<script>window.location.href='index.php'</script>";	
+	echo "<script>window.location.href='index.php'</script>";
 }
 else{
 
@@ -51,15 +51,15 @@ else{
 		$softwares = array();
 		while($row = mysql_fetch_array($results))
 			array_push($softwares, $row['sname']);
-	
-		//print_r($row);			
+
+		//print_r($row);
 		$statusInfo->setSoftwares($softwares);
-		
+
 		mysql_close();
-		
+
 	echo '<script>alert("Software Added!")</script>';
-	 echo "<script>window.location.href='index.php'</script>"; 
-	
+	 echo "<script>window.location.href='index.php'</script>";
+
 }
 
 
