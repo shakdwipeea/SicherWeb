@@ -1,6 +1,6 @@
 <?php
 require './StatusInfo.php';
-$con = mysql_connect("localhost","root","root");
+$con = mysql_connect("localhost","akash","shakdwipeea");
 if(!$con)
 {
 	die("Error in Connection!".mysql_error());

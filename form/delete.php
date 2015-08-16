@@ -1,8 +1,9 @@
 <?php
 require 'removeSoftware.php';
 $soft = $statusInfo->softwares;
+//var_dump($soft);
 if(isset($_POST['submit'])){
-$con = mysql_connect("localhost","root","root") or die(" Mysql Connection Error");
+$con = mysql_connect("localhost","akash","shakdwipeea") or die(" Mysql Connection Error");
 mysql_select_db("security") or die("Invalid DB");
 
 //echo var_dump($_POST['software']);
@@ -17,7 +18,7 @@ foreach($_POST['software'] as $key => $value){
         $emparray[] = $row;
     }
       //echo json_encode($emparray);
-    $fp = fopen($value.".json", 'w');
+    $fp = fopen("../backup/".$value.".json", 'w');
     fwrite($fp, json_encode($emparray));
     fclose($fp);
 
@@ -26,7 +27,8 @@ foreach($_POST['software'] as $key => $value){
 
  $query3 = "DELETE FROM softwarelist WHERE sname = '$value'";
  $result3 = mysql_query($query3) or die(mysql_error());
-
+if(($key = array_search($value, $statusInfo->softwares)) !== false) {
+   unset($statusInfo->softwares[$key]);
  if(!$result1 && !$result2 && !$result3)
  {
  	echo '<script>alert("Some error on deleting software")</script>';
@@ -36,8 +38,6 @@ foreach($_POST['software'] as $key => $value){
    echo '<script>alert("Software Deleted!")</script>';
  	 echo "<script>window.location.href='index.php'</script>";
  }
- if(($key = array_search($value, $soft)) !== false) {
-    unset($soft[$key]);
 }
 }
 mysql_close();
