@@ -16,7 +16,7 @@ if($login!="" && $pass!="")
     $data = mysql_query("select last_failed_login,incorrect_login from users where email='$login'") or die("Query Error IN 1");
     $info = mysql_fetch_array($data);
    // echo $info;
-    if($info){ 
+    if($info){
         $fdate = $info["last_failed_login"];
         $fcount = $info["incorrect_login"];
         //$fd = new DateTime($fdate);
@@ -57,21 +57,21 @@ echo $_POST["pass"];
 
 		function startHtml($login,$cname,$contact_info,$org)
 		{
-			
+
 			//$html_file = file_get_contents(".html");
 			// $doc = new DOMDocument();
 			// $doc->loadHTMLFILE("View2.html");
 			// echo $doc->saveHTML();
-			
+
 			$query = "Select * from $org";
 			$results = mysql_query($query);
-			
-			
+
+
 			$softwares = array();
 			while($row = mysql_fetch_array($results))
 				array_push($softwares, $row['sname']);
-			
-			
+
+
 			session_start();
 			$statusInfo = new StatusInfo();
 			$statusInfo->setSoftwares($softwares);
@@ -117,7 +117,7 @@ echo $_POST["pass"];
 
             }
         }
-		?>	
+		?>
 
 <html>
 	<head>

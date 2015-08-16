@@ -1,15 +1,26 @@
+.pos{
+	position: absolute;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    height: 100px;
+}
+dd label input {
+   margin-right:100px;
+}
+
 .cbp-mc-form {
 	position: relative;
 }
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.cbp-mc-form:before, 
-.cbp-mc-form:after { 
-	content: " "; display: table; 
+.cbp-mc-form:before,
+.cbp-mc-form:after {
+	content: " "; display: table;
 }
 
-.cbp-mc-form:after { 
-	clear: both; 
+.cbp-mc-form:after {
+	clear: both;
 }
 
 .cbp-mc-column {
@@ -49,7 +60,7 @@ margin-bottom: 20px;
 
 .cbp-mc-form input,
 .cbp-mc-form textarea {
-	
+
 }
 
 .cbp-mc-form textarea {
@@ -116,6 +127,31 @@ margin-bottom: 20px;
 	letter-spacing: 1px;
 		top: -800px;
 		background-color: rgba(0,123,123,0.1);
+}
+
+
+.cbp-mc-submit {
+
+	background: #00ffff;
+	margin-left: 0px;
+	border: 1px solid #000066;
+	color: #808080;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 15px 30px;
+	width: 350px;
+	font-size: 1.1em;
+	border-radius: 2px;
+	letter-spacing: 1px;
+		top: -800px;
+		background-color: rgba(0,123,123,0.1);
+}
+
+.cbp-mc-submit:hover {
+	color: #fff;
+	background: #606060;
 }
 
 .cbp-mc-form input.cbp-mc-submit:hover {
