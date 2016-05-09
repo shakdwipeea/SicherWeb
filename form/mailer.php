@@ -22,15 +22,15 @@ $software = $status->software;
 $mail = new PHPMailer();
 $mail->PluginDir = '../PHPMailer/'; // relative path to the folder where PHPMailer's files are located
 $mail->IsSMTP();
-$mail->Port = 465;
-$mail->Host = 'smtp.mandrillapp.com'; // "ssl://smtp.gmail.com" didn't worked
+$mail->Port = 587;
+$mail->Host = 'smtp.gmail.com'; // "ssl://smtp.gmail.com" didn't worked
 $mail->IsHTML(true); // if you are going to send HTML formatted emails
 $mail->Mailer = 'smtp';
-$mail->SMTPSecure = 'ssl';
+$mail->SMTPSecure = 'tls';
 
 $mail->SMTPAuth = true;
-$mail->Username = "badari.rvce@gmail.com";
-$mail->Password = "Hj4n-5o15NwZHNiawVIQRQ";
+$mail->Username = "ashakdwipeea@gmail.com";
+$mail->Password = "dtppfecujbyungva";
 
 $mail->SingleTo = true; // if you want to send mail to the users individually so that no recipients can see that who has got the same email.
 
@@ -78,15 +78,15 @@ echo "<script>alert('User registered. Keys sent to your email');</script>";
 	$mail = new PHPMailer();
 	$mail->PluginDir = '../PHPMailer/'; // relative path to the folder where PHPMailer's files are located
 	$mail->IsSMTP();
-	$mail->Port = 465;
-	$mail->Host = 'smtp.mandrillapp.com'; // "ssl://smtp.gmail.com" didn't worked
+	$mail->Port = 587;
+	$mail->Host = 'smtp.gmail.com'; // "ssl://smtp.gmail.com" didn't work
 	$mail->IsHTML(true); // if you are going to send HTML formatted emails
 	$mail->Mailer = 'smtp';
-	$mail->SMTPSecure = 'ssl';
+	$mail->SMTPSecure = 'tls';
 
 	$mail->SMTPAuth = true;
-	$mail->Username = "badari.rvce@gmail.com";
-	$mail->Password = "Hj4n-5o15NwZHNiawVIQRQ";
+	$mail->Username = "ashakdwipeea@gmail.com";
+	$mail->Password = "dtppfecujbyungva";
 
 	$mail->SingleTo = true; // if you want to send mail to the users individually so that no recipients can see that who has got the same email.
 
